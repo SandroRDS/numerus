@@ -1,0 +1,90 @@
+body
+{
+    font-family             :  'Open Sans', sans-serif;
+    text-align              :  center;
+    background-image        :  linear-gradient(to bottom, aquamarine, rgb(0, 0, 184));
+    background-attachment   :  fixed;
+}
+
+#play
+{
+    background-color   :  rgb(127, 175, 230); 
+    width              :  150px;
+    border-radius      :  50px;
+    border             :  3px solid rgb(36, 83, 136);
+    box-shadow         :  4px 4px 3px rgb(10, 43, 82);
+    height             :  60px;
+    position           :  absolute;
+    right              :  280px;
+    top                :  20px;
+    cursor             :  pointer;
+}
+
+.botoes
+{
+    width              :  30px;
+    height             :  30px;
+    font-size          :  20px;
+    border-radius      :  20px;
+    border             :  1px solid rgb(81, 81, 148);
+    background-color   :  rgb(152, 247, 250);
+    cursor             :  pointer;
+}
+
+#numero
+{
+    width           :  50px;
+    height          :  50px;
+    border-radius   :  10px;
+    border          :  2px solid rgb(81, 170, 166);
+    text-align      :  center;
+    font-size       :  18px;
+    margin          :  15px;
+}
+
+.caixas_limite
+{
+    width           :  55px;
+    height          :  29px;
+    border-radius   :  31px;
+    border          :  2px solid rgb(32 90 88);
+    text-align      :  center;
+    font-size       :  18px;
+}
+
+input[type=number]::-webkit-inner-spin-button 
+{ 
+    -webkit-appearance   :  none;
+}
+
+input[type=number] 
+{ 
+    -moz-appearance   :  textfield;
+    appearance        :  textfield;
+
+}
+
+#enviar
+{
+    width              :  150px;
+    height             :  30px;
+    font-size          :  16px;
+    font-family        :  'Open Sans';
+    border-radius      :  15px;
+    border             :  2px solid rgb(161, 170, 81);
+    background-color   :  rgb(225, 235, 84);
+    color              :  rgb(39, 39, 39);
+    margin-top         :  30px;
+    cursor             :  pointer;
+    display            :  block;
+    margin-right       :  auto;
+    margin-left        :  auto;
+}
+
+#tentativas
+{
+    margin-top      :  150px;
+    color           :  #93baff; 
+    display         :  inline-block;
+    border-bottom   :  1px solid;
+}

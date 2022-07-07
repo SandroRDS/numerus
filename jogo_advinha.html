@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advinhe o Número</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!--Título: Advinhe o Número-->
+    <h1 style="color: rgb(15, 71, 109); font-size: 35px; text-shadow: 3px 3px 10px rgb(138, 136, 136)">Advinhe o Número</h1>
+    
+    <!--Botão Play-->
+    <button id="play" onclick="iniciarJogo()">
+        <img src="images/play.png" width="50px" alt="botao play">
+    </button>
+
+    <!--DIV Principal: Seleção do Número-->
+    <div id="main" style="margin-top: 300px; display: none; text-align: center;">
+        
+        <!--Botão: Diminuir-->
+        <input ondblclick="aumentarNumero(4)" onclick="aumentarNumero(1)" type="button" value="+" class="botoes" id="diminuir">
+        
+        <br>
+        
+        <!--Caixa de Texto: Limite de Menor Número-->
+        <input type="number" class="caixas_limite" id="limiteMenor" disabled="true">
+        
+        <!--Caixa de Texto: Número da Tentativa-->
+        <input onchange="validarCaixa()" type="number" id="numero" value="0" min="0" max="1000">
+        
+        <!--Caixa de Texto: Limite de Maior Número-->
+        <input type="number" class="caixas_limite" id="limiteMaior" disabled="true">
+        
+        <br>
+        
+        <!--Botão: Aumentar-->
+        <input ondblclick="diminuirNumero(4)" onclick="diminuirNumero(1)" type="button" value="-" class="botoes" id="aumentar">
+        
+        <!--Botão: Realizar Tentativa-->
+        <input onclick="realizarTentativa()" type="button" value="Tentar Advinhar" id="enviar">
+    </div>
+
+    <!--Contador de Tentativas-->
+    <p id="tentativas"></p>
+
+    <script src="js/funcoes.js"></script>
+</body>
+</html>
