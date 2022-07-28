@@ -1,5 +1,5 @@
 <h1> 
-<p align="center"> MINI-GAME: ADVINHE O NÚMERO 🎲 </p>
+<p align="center"> MINI-GAME: ADIVINHE O NÚMERO 🎲 </p>
 
 <p align="center"> 
     <img src="images/html.png">
@@ -19,7 +19,7 @@
 
 ## Descrição ##
 
-O projeto consiste em uma espécie de Mini-Game da brincadeira infantil *"Tá quente, tá frio"*, porém, com números. Sendo assim, neste jogo de advinhação e lógica você deverá descobrir um número aleatório, que foi selecionado entre 0 e 1000, através de algumas dicas que o jogo irá retornar ao longo das tentativas, indicando a distância que o jogador está do número correto.
+O projeto consiste em uma espécie de Mini-Game da brincadeira infantil *"Tá quente, tá frio"*, porém, com números. Sendo assim, neste jogo de adivinhação e lógica você deverá descobrir um número aleatório, que foi selecionado entre 0 e 1000, através de algumas dicas que o jogo irá retornar ao longo das tentativas, indicando a distância que o jogador está do número correto.
 
 <p align="center">
 <img src="images/interface.png" width="800px">
