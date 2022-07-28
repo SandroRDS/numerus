@@ -11,7 +11,7 @@
 [#APRENDI NA ALURA](https://www.alura.com)
 
 > &#x1F517; Link do Projeto:  
-&#x27A1; https://sandrords.github.io/advinhe-o-numero/
+&#x27A1; https://sandrords.github.io/adivinhe-o-numero/
 
 > Tipo de Projeto: *Pessoal* &#x1F4DA;
 
