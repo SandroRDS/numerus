@@ -8,8 +8,6 @@
 </p>
 </h1>
 
-[#APRENDI NA ALURA](https://www.alura.com)
-
 > &#x1F517; Link do Projeto:  
 &#x27A1; https://sandrords.github.io/adivinhe-o-numero/
 
@@ -60,3 +58,6 @@ Esquema de Cores por Distância
 
 * ***HTML*** e ***CSS***: Criação e estilização dos elementos da página
 * ***JavaScript***: Funcionamento de todo algoritmo do jogo.
+
+---
+Made by &#128153; [SandroRDS](https://www.linkedin.com/in/sandro-rosa-de-souza-02a5bb241/) &#128153; | &#x1F47E; Mais Projetos: https://github.com/SandroRDS?tab=repositories
