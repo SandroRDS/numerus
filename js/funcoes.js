@@ -1,59 +1,5 @@
 var numeroSorteado, quantidadeTentativas, limiteMaior, limiteMenor, tentativa;
 
-//FUNÇÃO: VALIDAR A CAIXA DE NÚMERO, IMPEDINDO QUE RECEBA MANUALMENTE VALORES INVÁLIDOS
-function validarCaixa()
-{
-    var caixaNumero = document.querySelector("#numero");
-    
-    //RECEBIMENTO DE VALOR VAZIO
-    if(caixaNumero.value == "")
-    {
-        caixaNumero.value = 0;
-    }
-
-    //RECEBIMENTO DE VALOR MAIOR QUE 1000
-    if(caixaNumero.value > 1000)
-    {
-        caixaNumero.value = 1000;
-    }
-
-    //RECEBIMENTO DE VALOR MENOR QUE 0
-    if(caixaNumero.value < 0)
-    {
-        caixaNumero.value = 0;
-    }
-}
-
-
-//FUNÇÃO: AUMENTAR NÚMERO NA SETA +
-function aumentarNumero(velocidade)
-{
-    var numero = document.querySelector("#numero");
-    var valor = parseInt(numero.value);
-
-    valor += velocidade;
-
-    if(valor<=1000)
-    {
-        numero.value = valor;
-    }
-}
-
-
-//FUNÇÃO: DIMINUIR NÚMERO NA SETA -
-function diminuirNumero(velocidade)
-{
-    var numero = document.querySelector("#numero");
-    var valor = parseInt(numero.value);
-
-    valor -= velocidade;
-
-    if(valor>=0)
-    {
-        numero.value = valor;
-    }
-}
-
 
 //FUNÇÃO: INICIAR O JOGO
 function iniciarJogo()
@@ -114,23 +60,22 @@ function finalizarJogo()
 }
 
 
-//FUNÇÃO: GERAR UM NOVO NÚMERO ALEATÓRIO
-function gerarNovoNumero(min, max)
-{
-    var numeroEncontrado = false;
+//FUNÇÃO: REALIZAR UMA TENTATIVA
+function realizarTentativa()
+{   
+    quantidadeTentativas--;
+    document.getElementById("tentativas").innerHTML = "Tentativas Restantes: "+quantidadeTentativas;
     
-    while(numeroEncontrado == false)
-    {
-        var numero = Math.round(Math.random() * 2 * max);
-        
-        //CONTROLAR SE O NÚMERO GERADO ESTÁ ENTRE O NÚMERO MÍNIMO E MÁXIMO PASSADOS
-        if((numero >= min) && (numero <= max))
-        {
-            numeroEncontrado = true;
-        }
+    tentativa = document.getElementById("numero").value;
+    
+    if(tentativa == numeroSorteado) //NÚMERO DA TENTATIVA É IGUAL AO NÚMERO SORTEADO -> FUNÇÃO: ACERTOU
+    {        
+        acertou(numeroSorteado);
     }
-
-    return numero;
+    else //NÚMERO DA TENTATIVA É DIFERENTE DO NÚMERO SORTEADO -> FUNÇÃO: ERROU
+    {
+        errou(quantidadeTentativas, tentativa, numeroSorteado);
+    }
 }
 
 
@@ -277,20 +222,76 @@ function errou(tentativasRestantes, numeroInformado, numeroSorteado)
 }
 
 
-//FUNÇÃO: REALIZAR UMA TENTATIVA
-function realizarTentativa()
-{   
-    quantidadeTentativas--;
-    document.getElementById("tentativas").innerHTML = "Tentativas Restantes: "+quantidadeTentativas;
+//FUNÇÃO: VALIDAR A CAIXA DE NÚMERO, IMPEDINDO QUE RECEBA MANUALMENTE VALORES INVÁLIDOS
+function validarCaixa()
+{
+    var caixaNumero = document.querySelector("#numero");
     
-    tentativa = document.getElementById("numero").value;
-    
-    if(tentativa == numeroSorteado) //NÚMERO DA TENTATIVA É IGUAL AO NÚMERO SORTEADO -> FUNÇÃO: ACERTOU
-    {        
-        acertou(numeroSorteado);
-    }
-    else //NÚMERO DA TENTATIVA É DIFERENTE DO NÚMERO SORTEADO -> FUNÇÃO: ERROU
+    //RECEBIMENTO DE VALOR VAZIO
+    if(caixaNumero.value == "")
     {
-        errou(quantidadeTentativas, tentativa, numeroSorteado);
+        caixaNumero.value = 0;
     }
+
+    //RECEBIMENTO DE VALOR MAIOR QUE 1000
+    if(caixaNumero.value > 1000)
+    {
+        caixaNumero.value = 1000;
+    }
+
+    //RECEBIMENTO DE VALOR MENOR QUE 0
+    if(caixaNumero.value < 0)
+    {
+        caixaNumero.value = 0;
+    }
+}
+
+
+//FUNÇÃO: AUMENTAR NÚMERO NA SETA +
+function aumentarNumero(velocidade)
+{
+    var numero = document.querySelector("#numero");
+    var valor = parseInt(numero.value);
+
+    valor += velocidade;
+
+    if(valor<=1000)
+    {
+        numero.value = valor;
+    }
+}
+
+
+//FUNÇÃO: DIMINUIR NÚMERO NA SETA -
+function diminuirNumero(velocidade)
+{
+    var numero = document.querySelector("#numero");
+    var valor = parseInt(numero.value);
+
+    valor -= velocidade;
+
+    if(valor>=0)
+    {
+        numero.value = valor;
+    }
+}
+
+
+//FUNÇÃO: GERAR UM NOVO NÚMERO ALEATÓRIO
+function gerarNovoNumero(min, max)
+{
+    var numeroEncontrado = false;
+    
+    while(numeroEncontrado == false)
+    {
+        var numero = Math.round(Math.random() * 2 * max);
+        
+        //CONTROLAR SE O NÚMERO GERADO ESTÁ ENTRE O NÚMERO MÍNIMO E MÁXIMO PASSADOS
+        if((numero >= min) && (numero <= max))
+        {
+            numeroEncontrado = true;
+        }
+    }
+
+    return numero;
 }
