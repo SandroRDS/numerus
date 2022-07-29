@@ -19,7 +19,7 @@
 
 > Status do Projeto: *Versão 1 Completa* &#10004;&#x1F6A7;
 
-## Descrição ##
+<h2 id="descricao"> Descrição </h2>
 
 O projeto consiste em uma espécie de Mini-Game da brincadeira infantil *"Tá quente, tá frio"*, porém, com números. Sendo assim, neste jogo de adivinhação e lógica você deverá descobrir um número aleatório, que foi selecionado entre 0 e 1000, através de algumas dicas que o jogo irá retornar ao longo das tentativas, indicando a distância que o jogador está do número correto.
 
@@ -29,7 +29,7 @@ O projeto consiste em uma espécie de Mini-Game da brincadeira infantil *"Tá qu
 Interface do Jogo
 </p>
 
-## Regras do Jogo ##
+<h2 id="regras"> Regras do Jogo </h2>
 ### 1. Mensagens de Ajuda ###
 O jogador possui **8 tentativas** para encontrar o número correto. Ao longo de cada tentativa, o jogo irá retornar uma mensagem indicando o quão longe o jogador está do número correto e se ele deveria diminuir ou aumentar o número da sua tentativa anterior.
 
@@ -58,7 +58,7 @@ Além das mensagens de ajuda, são mostradas duas caixas de limites para indicar
 Esquema de Cores por Distância
 </p>
 
-## Ferramentas Utilizadas ##
+<h2 id="ferramentas"> Ferramentas Utilizadas </h2>
 
 * ***HTML*** e ***CSS***: Criação e estilização dos elementos da página
 * ***JavaScript***: Funcionamento de todo algoritmo do jogo.
