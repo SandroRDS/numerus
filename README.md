@@ -8,6 +8,10 @@
 </p>
 </h1>
 
+<p align="center"> 
+<a href="#descricao">Descrição</a> &bull; <a href="#regras">Regras do Jogo</a> &bull; <a href="#ferramentas">Ferramentas Utilizadas</a>
+</p>
+
 > &#x1F517; Link do Projeto:  
 &#x27A1; https://sandrords.github.io/adivinhe-o-numero/
 
