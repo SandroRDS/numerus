@@ -1,5 +1,14 @@
 import IGame from "../interfaces/IGame";
 
+// Levels (Calculado a partir de quantos % a distância entre o número sorteado e o número da tentativa representam, levando em consideração o tamanho total da lista):
+// <= 1% -> Lvl 1
+// <= 5% -> Lvl 2
+// <= 10% -> Lvl 3
+// <= 20% -> Lvl 4
+// <= 40% -> Lvl 5
+// > 40% -> Lvl 6
+
+
 class Game implements IGame {
     private drawnNumber: number;
     private attempts: number;

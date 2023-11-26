@@ -1,4 +1,4 @@
-type AttemptReturn = {
+export type AttemptReturn = {
     attemptedNumber: number;
     distanceLevel: number;
     remainingAttempts: number;
