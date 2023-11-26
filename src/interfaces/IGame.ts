@@ -1,6 +1,7 @@
 export type AttemptReturn = {
     attemptedNumber: number;
     distanceLevel: number;
+    positionToGo: 'top' | 'down' | '';
     remainingAttempts: number;
     isCorrect: boolean;
 };
